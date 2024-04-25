@@ -5,6 +5,8 @@ const morgan = require("morgan"); // import morgan
 const app = express(); // chayj func express
 const port = 3000; // chạy prj trên cổng 3000
 
+app.use(express.static(path.join(__dirname, "assets")));
+
 // HTTP logger
 app.use(morgan("combined"));
 
