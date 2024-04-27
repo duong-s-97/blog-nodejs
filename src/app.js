@@ -8,6 +8,11 @@ const port = 3000; // chạy prj trên cổng 3000
 const bodyParser = require("body-parser");
 const route = require("./routes");
 
+const db = require("./config/db");
+
+// Connect to db
+db.connect();
+
 // app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.urlencoded());
 app.use(express.json());
