@@ -1,3 +1,31 @@
 <div class="container">
-  home page
+  <div class="row row-cols-1 row-cols-md-3 g-4">
+
+    {{#each courses}}
+      <div class="col">
+        <div class="card speakers h-100">
+          <a href="/courses/{{this.slug}}" class="speakers">
+            <div class="spk-img">
+              <button class="course-btn">Xem khóa học</button>
+
+              <img src="{{this.thumbnail}}" class="card-img-top" alt="" />
+
+            </div>
+          </a>
+
+          <div class="card-body">
+            <h5 class="card-title"><a
+                href="/courses/{{this.slug}}"
+                class="link-dark link-underline-light"
+              >{{this.name}}</a></h5>
+            <p class="card-text">
+              {{this.description}}
+            </p>
+          </div>
+        </div>
+      </div>
+
+    {{/each}}
+
+  </div>
 </div>
